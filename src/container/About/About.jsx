@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import './About.scss';
 import { images } from '../../constants';
-// import { urlFor, client } from '../../client';
 import { AppWrap } from '../../wrapper'
+import './About.scss';
 
 const abouts = [
   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
@@ -13,20 +11,6 @@ const abouts = [
 ]
 
 const About = () => {
-  // const [abouts, setAbouts] = useState([]);
-  // useEffect(() => {
-  //   const query = '*[_type == "abouts"]';
-
-  //   client.fetch(query).then((data) => {
-      // setAbouts([
-      //   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
-      //   { title: 'Web Design', description: 'I am a good web developer.', imgUrl: images.about02 },
-      //   { title: 'UI/UX', description: 'I am a good web developer.', imgUrl: images.about03 },
-      //   { title: 'Web Animation', description: 'I am a good web developer.', imgUrl: images.about04 }
-      // ]);
-  //   });
-  // }, []);
-
   return (
     <>
       <h2 className="head-text">

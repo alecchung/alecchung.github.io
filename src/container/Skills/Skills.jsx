@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
-// import { urlFor, client } from '../../client';
 import './Skills.scss';
 import { images } from '../../constants';
 
 const experiences = [
   { year: '2018', works: [{ name: 'Git', company: 'Microsoft', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2019', works: [{ name: 'Git', company: 'Google', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2020', works: [{ name: 'Git', company: 'Facebook', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2021', works: [{ name: 'Git', company: 'Microsoft', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] }
+  { year: '2019', works: [{ name: 'Javascript', company: 'Google', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
+  { year: '2020', works: [{ name: 'React', company: 'Facebook', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
+  { year: '2021', works: [{ name: 'Typescript', company: 'Microsoft', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] }
 ]
 
 const skills = [
@@ -22,21 +20,6 @@ const skills = [
 ]
 
 const Skills = () => {
-  // const [experiences, setExperiences] = useState([]);
-  // const [skills, setSkills] = useState([]);
-
-  // useEffect(() => {
-
-
-  // client.fetch(experiences).then((data) => {
-  // setExperiences(experiences);
-  // });
-
-  // client.fetch(skills).then((data) => {
-  // setSkills(skills);
-  // });
-  // }, []);
-
   return (
     <>
       <h2 className="head-text">Skills & Experiences</h2>

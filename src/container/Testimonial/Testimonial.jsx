@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-// import { urlFor, client } from '../../client';
 import './Testimonial.scss';
 import { images } from '../../constants';
 
@@ -30,13 +29,9 @@ const Testimonial = () => {
       { name: 'Git', imgUrl: images.git}
     ]
 
-    // client.fetch(query).then((data) => {
       setTestimonials(testimonials);
-    // });
-
-    // client.fetch(brandsQuery).then((data) => {
       setBrands(brands);
-    // });
+      
   }, []);
 
   return (

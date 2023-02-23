@@ -12,7 +12,6 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    // const query = '*[_type == "works"]';
     const works = [
       { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['UI/UX', 'Web App', 'All'] },
       { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['Mobile App', 'Web App', 'All'] },
@@ -21,10 +20,8 @@ const Work = () => {
       { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['UI/UX', 'Mobile App', 'All'] },
       { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['React JS', 'UI/UX', 'All'] },
     ]
-    // client.fetch(works).then((data) => {
     setWorks(works);
     setFilterWork(works);
-    // });
 
   }, []);
 
