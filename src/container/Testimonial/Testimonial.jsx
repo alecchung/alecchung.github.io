@@ -17,7 +17,7 @@ const Testimonial = () => {
 
   useEffect(() => {
     const testimonials = [
-      { name: 'John von Neumann', feedback: "Young man, in mathematics you don't understand things. You just get used to them.", company: '', imageurl: images.git },
+      { name: 'John von Neumann', feedback: "In mathematics you don't understand things. You just get used to them.", company: '', imageurl: images.git },
       { name: 'Louis Mike', feedback: 'I am a good web developer.', company: 'JavaScript',imageurl: images.javascript },
       { name: 'Jane Wood', feedback: 'I am a good web developer.', company: 'React',imageurl: images.react  },
       { name: 'Luke Goodmann', feedback: 'I am a good web developer.', company: 'Figma',imageurl: images.figma  },
@@ -46,7 +46,7 @@ const Testimonial = () => {
           <div className="app__testimonial-item app__flex">
             {/* <img src={testimonials[currentIndex].imgurl} alt={testimonials[currentIndex].name} /> */}
             <div className="app__testimonial-content">
-              <p className="p-text">{testimonials[currentIndex].feedback}</p>
+              <p className="head-text">{testimonials[currentIndex].feedback}</p>
               <div>
                 <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
