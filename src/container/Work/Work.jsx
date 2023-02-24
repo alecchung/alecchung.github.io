@@ -66,7 +66,7 @@ const Work = () => {
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5, ease: 'easeInOut', staggerChildren: 0.5 }}
+                transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
@@ -74,7 +74,7 @@ const Work = () => {
                   <motion.div
                     whileInView={{ scale: [0.7, 1] }}
                     whileHover={{ scale: [1, 0.7] }}
-                    transition={{ duration: 0.5, ease: 'easeInOut'  }}
+                    transition={{ duration: 0.25, ease: 'easeInOut'  }}
                     className="app__flex"
                   >
                     <AiFillEye />
@@ -84,7 +84,7 @@ const Work = () => {
                   <motion.div
                     whileInView={{ scale: [0.7, 1] }}
                     whileHover={{ scale: [1, 0.7] }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                    transition={{ duration: 0.25, ease: 'easeInOut' }}
                     className="app__flex"
                   >
                     <AiFillGithub />
