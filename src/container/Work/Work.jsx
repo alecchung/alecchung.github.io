@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
 import './Work.scss';
-import { images } from '../../constants';
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -12,17 +13,12 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const works = [
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['UI/UX', 'Web App', 'All'] },
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['Mobile App', 'Web App', 'All'] },
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['React JS', 'Web App', 'All'] },
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['React JS', 'All'] },
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['UI/UX', 'Mobile App', 'All'] },
-      { title: 'Web Development', description: 'I am a good web developer.', projectLink: 'https://alecchung.github.io/hangman', codeLink: 'https://github.com/alecchung/hangman', imgUrl: images.about01, tags: ['React JS', 'UI/UX', 'All'] },
-    ]
-    setWorks(works);
-    setFilterWork(works);
+    const query = '*[_type == "works"]';
 
+    client.fetch(query).then((data) => {
+      setWorks(data);
+      setFilterWork(data);
+    });
   }, []);
 
   const handleWorkFilter = (item) => {
@@ -42,7 +38,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text">My Creative <span>Projects</span></h2>
 
       <div className="app__work-filter">
         {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
@@ -61,12 +57,12 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+        {filterWork.map((work) => (
+          <div className="app__work-item app__flex" key={work._id}>
             <div
               className="app__work-img app__flex"
             >
-              <img src={work.imgUrl} alt={work.name} />
+              <img src={urlFor(work.imgUrl)} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

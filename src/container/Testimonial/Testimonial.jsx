@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
 import './Testimonial.scss';
-import { images } from '../../constants';
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,23 +16,16 @@ const Testimonial = () => {
   };
 
   useEffect(() => {
-    const testimonials = [
-      { name: 'John von Neumann', feedback: "In mathematics you don't understand things. You just get used to them.", company: '', imageurl: images.git },
-      { name: 'Louis Mike', feedback: 'I am a good web developer.', company: 'JavaScript',imageurl: images.javascript },
-      { name: 'Jane Wood', feedback: 'I am a good web developer.', company: 'React',imageurl: images.react  },
-      { name: 'Luke Goodmann', feedback: 'I am a good web developer.', company: 'Figma',imageurl: images.figma  },
-    ]
+    const query = '*[_type == "testimonials"]';
+    const brandsQuery = '*[_type == "brands"]';
 
-    const brands = [
-      { name: 'JavaScript', imgUrl: images.javascript},
-      { name: 'React', imgUrl: images.react},
-      { name: 'Figma', imgUrl: images.figma},
-      { name: 'Git', imgUrl: images.git}
-    ]
+    client.fetch(query).then((data) => {
+      setTestimonials(data);
+    });
 
-      setTestimonials(testimonials);
-      setBrands(brands);
-      
+    client.fetch(brandsQuery).then((data) => {
+      setBrands(data);
+    });
   }, []);
 
   return (
@@ -39,9 +33,9 @@ const Testimonial = () => {
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
-            {/* <img src={testimonials[currentIndex].imgurl} alt={testimonials[currentIndex].name} /> */}
+            <img src={urlFor(testimonials[currentIndex].imageurl)} alt={testimonials[currentIndex].name} />
             <div className="app__testimonial-content">
-              <p className="head-text">{testimonials[currentIndex].feedback}</p>
+              <p className="p-text">{testimonials[currentIndex].feedback}</p>
               <div>
                 <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
@@ -61,17 +55,6 @@ const Testimonial = () => {
         </>
       )}
 
-      <div className="app__testimonial-brands app__flex">
-        {brands.map((brand) => (
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            key={brand._id}
-          >
-            <img src={brand.imgUrl} alt={brand.name} />
-          </motion.div>
-        ))}
-      </div>
     </>
   );
 };

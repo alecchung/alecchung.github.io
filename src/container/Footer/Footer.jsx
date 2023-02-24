@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
@@ -36,16 +37,16 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Drop me a line & say hi</h2>
+      <h2 className="head-text">Drop me a line</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:dont_send@alec.com" className="p-text">dont_send@alec.com</a>
+          <a href="mailto:noreply@alec.com" className="p-text">noreply@alec.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+49 (123) 456-7890</a>
+          <a href="tel:+49 (123) 456-7890" className="p-text">+49 (123) 456-7890</a>
         </div>
       </div>
       {!isFormSubmitted ? (

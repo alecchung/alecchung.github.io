@@ -1,43 +1,47 @@
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
 import './Skills.scss';
-import { images } from '../../constants';
-
-const experiences = [
-  { year: '2018', works: [{ name: 'Git', company: 'Microsoft', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2019', works: [{ name: 'Javascript', company: 'Google', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2020', works: [{ name: 'React', company: 'Facebook', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] },
-  { year: '2021', works: [{ name: 'Typescript', company: 'Microsoft', desc: 'Maintain git environment' }, { name: 'React', desc: 'Develop React Apps' }] }
-]
-
-const skills = [
-  { name: 'React', bgColor: 'lightgrey', icon: images.cpp },
-  { name: 'Node JS', bgColor: 'lightgrey', icon: images.node },
-  { name: 'Figma', bgColor: 'lightgrey', icon: images.figma },
-  { name: 'Git', bgColor: 'lightgrey', icon: images.git },
-  { name: 'JavaScript', bgColor: 'lightgrey', icon: images.javascript }
-]
 
 const Skills = () => {
+  const [experiences, setExperiences] = useState([]);
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "experiences"]';
+    const skillsQuery = '*[_type == "skills"]';
+
+    client.fetch(query).then((data) => {
+      setExperiences(data);
+    });
+
+    client.fetch(skillsQuery).then((data) => {
+      setSkills(data);
+     
+    });
+  }, []);
+
   return (
     <>
       <h2 className="head-text">Skills & Experiences</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills.map((skill, index) => (
+          {skills.map((skill) => (
+            
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="app__skills-item app__flex"
-              key={skill.name + index}
+              key={skill._id}
             >
               <div
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={skill.icon} alt={skill.name} />
+                <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
@@ -47,33 +51,31 @@ const Skills = () => {
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
-              key={experience.year}
+              key={experience._id}
             >
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
-                {experience.works.map((work, index) => (
-                  <div key={index}>
+                {experience.works.map((work) => (
+                  <div key={work._key}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
-                      key={work.name}
+                      
                     >
                       <h4 className="bold-text">{work.name}</h4>
-                      <p key={work.company} className="p-text">{work.company}</p>
+                      <p className="p-text">{work.company}</p>
                     </motion.div>
                     <Tooltip
-                      key={work.name}
-                      id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
-                      {work.desc}
+                      {work.description}
                     </Tooltip>
                   </div>
                 ))}
