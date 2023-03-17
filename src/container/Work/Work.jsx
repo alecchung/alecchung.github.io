@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
@@ -41,7 +40,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Projects</span></h2>
 
       <div className="app__work-filter">
-        {['MERN', 'Full Stack', 'Frontend', 'Backend', 'TypeScript', 'All'].map((item, index) => (
+        {['MERN/Full Stack', 'Frontend', 'Backend', 'ReactJS', 'Material UI', 'TypeScript', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -74,7 +73,7 @@ const Work = () => {
                   <motion.div
                     whileInView={{ scale: [0.7, 1] }}
                     whileHover={{ scale: [1, 0.7] }}
-                    transition={{ duration: 0.25, ease: 'easeInOut'  }}
+                    transition={{ duration: 0.25, ease: 'easeInOut' }}
                     className="app__flex"
                   >
                     <AiFillEye />
