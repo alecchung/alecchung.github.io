@@ -2,7 +2,7 @@
 
 My Portfolio website itself is a full stack project, with backend support from Sanity. Beside that, I have four other projects, small and big: 
 
-## To-do List
+## Todo List
 
 - A simple MERN application: MongoDB + Express + ReactJS + Node.
 
@@ -14,13 +14,15 @@ My Portfolio website itself is a full stack project, with backend support from S
 
 - Build with TypeScript
 
-- Handled tricky problems imposed by the German language - handling with German umlauts, to be exact. 
+- Handled tricky problems imposed by the German language - German umlauts and the sharp S (ß) , to be exact. 
 
 ## Travel Agency Website
 
 - **MERN project** with the ability to retrieve and update MongoDB database. 
 
 - Register/Login functionalities. 
+
+- Comment handling with proper authorization. 
 
 ## Admin Dashboard
 
