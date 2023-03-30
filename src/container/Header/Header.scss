@@ -5,7 +5,7 @@
   background-position: center;
   background-repeat: repeat;
 
-  // disable the default padding styles
+  // overwrite default padding styles
   .app__wrapper {
     padding: 0;
 
@@ -76,7 +76,6 @@
 
     p {
       width: 100%;
-      // text-transform: uppercase;
       text-align: center;
       font-size: 0.94rem;
     }
@@ -122,14 +121,14 @@
   // circles with different height & width
 
   div:nth-child(1) {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   div:nth-child(2) {
     margin: 1.75rem;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
   div:nth-child(3) {
