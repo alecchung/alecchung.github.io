@@ -99,7 +99,7 @@
   flex: 0.75;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
@@ -121,22 +121,32 @@
   // circles with different height & width
 
   div:nth-child(1) {
-    width: 90px;
-    height: 90px;
-  }
-
-  div:nth-child(2) {
-    margin: 1.75rem;
     width: 120px;
     height: 120px;
   }
 
+  div:nth-child(2) {
+    margin: 1.75rem;
+    width: 100px;
+    height: 100px;
+  }
+
   div:nth-child(3) {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
+  }
+
+  div:nth-child(4) {
+    width: 100px;
+    height: 100px;
   }
 
   @media screen and (min-width: 2000px) {
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+    }
+
     div:nth-child(2) {
       width: 400px;
       height: 400px;
@@ -147,7 +157,7 @@
       height: 170px;
     }
 
-    div:nth-child(1) {
+    div:nth-child(4) {
       width: 200px;
       height: 200px;
     }
