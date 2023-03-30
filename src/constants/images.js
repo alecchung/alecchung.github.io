@@ -10,7 +10,7 @@ import bootstrap from '../assets/bootstrap.svg';
 import circle from '../assets/circle.svg';
 import cpp from '../assets/cpp.svg';
 import css from '../assets/css.svg';
-import email from '../assets/email.png';
+import email from '../assets/email.svg';
 import expressjs from '../assets/expressjs.svg';
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.svg';
