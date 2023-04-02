@@ -42,7 +42,6 @@ const Footer = () => {
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
           <h2 className="head-text"> Drop me a line</h2>
-          <a href="mailto:noreply@alec.com" className="p-text"></a>
         </div>
       </div>
       {!isFormSubmitted ? (
