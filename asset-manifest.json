@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f53cb2bd.css",
-    "main.js": "/static/js/main.4dd38060.js",
+    "main.css": "/static/css/main.5f2c13f5.css",
+    "main.js": "/static/js/main.9013a265.js",
     "static/media/about04.png": "/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/about01.png": "/static/media/about01.080509de05322b7aafda.png",
@@ -13,7 +13,7 @@
     "static/media/figma.png": "/static/media/figma.152e55329b6f1915967e.png",
     "static/media/expressjs.svg": "/static/media/expressjs.75fff9be2f3b289ba7be1f43a08f7a4c.svg",
     "static/media/sass.svg": "/static/media/sass.8aa78a8393470431c8036541f0708bd7.svg",
-    "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/react.svg": "/static/media/react.109dd0dbecb74316a94e0c3e3a5cf52f.svg",
     "static/media/nodejs.svg": "/static/media/nodejs.615ffbea9529ca7047ed8a912bfd94b2.svg",
     "static/media/redux.svg": "/static/media/redux.0e4fb1c819ac4c060c92343147d4ccf7.svg",
     "static/media/cpp.svg": "/static/media/cpp.fd1f9f607ba45af3fdea8cd43799bba9.svg",
@@ -34,11 +34,11 @@
     "static/media/circle.svg": "/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
     "static/media/flutter.svg": "/static/media/flutter.83219c099347619051f3aa0fa0e2108e.svg",
     "static/media/vue.svg": "/static/media/vue.4921ee763e7954a01fa7d9bc10d1ab93.svg",
-    "main.f53cb2bd.css.map": "/static/css/main.f53cb2bd.css.map",
-    "main.4dd38060.js.map": "/static/js/main.4dd38060.js.map"
+    "main.5f2c13f5.css.map": "/static/css/main.5f2c13f5.css.map",
+    "main.9013a265.js.map": "/static/js/main.9013a265.js.map"
   },
   "entrypoints": [
-    "static/css/main.f53cb2bd.css",
-    "static/js/main.4dd38060.js"
+    "static/css/main.5f2c13f5.css",
+    "static/js/main.9013a265.js"
   ]
 }
