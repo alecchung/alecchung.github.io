@@ -12,7 +12,7 @@ const Project = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "projects"]';
+    const query = '*[_type == "projects"] | order(_createdAt)';
 
     client.fetch(query).then((data) => {
       setProjects(data);
