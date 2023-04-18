@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -19,7 +19,7 @@ const Skills = () => {
 
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
-     
+
     });
   }, []);
 
@@ -30,7 +30,7 @@ const Skills = () => {
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
-            
+
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -65,7 +65,7 @@ const Skills = () => {
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
-                      
+
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>

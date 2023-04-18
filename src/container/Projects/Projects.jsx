@@ -13,7 +13,6 @@ const Project = () => {
 
   useEffect(() => {
     const query = '*[_type == "projects"] | order(_createdAt)';
-
     client.fetch(query).then((data) => {
       setProjects(data);
       setFilterProject(data);
