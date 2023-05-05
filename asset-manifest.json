@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.5f2c13f5.css",
-    "main.js": "/static/js/main.34fcfff5.js",
+    "main.js": "/static/js/main.d77ba06d.js",
+    "static/js/726.acf4e829.chunk.js": "/static/js/726.acf4e829.chunk.js",
     "static/media/about04.png": "/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/about01.png": "/static/media/about01.080509de05322b7aafda.png",
@@ -35,10 +36,11 @@
     "static/media/flutter.svg": "/static/media/flutter.83219c099347619051f3aa0fa0e2108e.svg",
     "static/media/vue.svg": "/static/media/vue.4921ee763e7954a01fa7d9bc10d1ab93.svg",
     "main.5f2c13f5.css.map": "/static/css/main.5f2c13f5.css.map",
-    "main.34fcfff5.js.map": "/static/js/main.34fcfff5.js.map"
+    "main.d77ba06d.js.map": "/static/js/main.d77ba06d.js.map",
+    "726.acf4e829.chunk.js.map": "/static/js/726.acf4e829.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f2c13f5.css",
-    "static/js/main.34fcfff5.js"
+    "static/js/main.d77ba06d.js"
   ]
 }
