@@ -41,10 +41,12 @@
       font-weight: 900;
       margin-right: 1rem;
     }
+
     a {
       text-decoration: none;
       font-weight: 500;
     }
+
     &:hover {
       box-shadow: 0 0 25px #fef4f5;
     }
@@ -84,7 +86,7 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      background-color: var(--white-color);
 
       font-family: var(--font-base);
       color: var(--secondary-color);
