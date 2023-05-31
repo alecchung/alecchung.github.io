@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.31848f10.css",
+    "main.css": "/static/css/main.bb8a6c1d.css",
     "main.js": "/static/js/main.82c2b2de.js",
     "static/js/726.acf4e829.chunk.js": "/static/js/726.acf4e829.chunk.js",
     "static/media/about04.png": "/static/media/about04.fa7b3a72ed32b0e25bfb.png",
@@ -35,12 +35,12 @@
     "static/media/circle.svg": "/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
     "static/media/flutter.svg": "/static/media/flutter.83219c099347619051f3aa0fa0e2108e.svg",
     "static/media/vue.svg": "/static/media/vue.4921ee763e7954a01fa7d9bc10d1ab93.svg",
-    "main.31848f10.css.map": "/static/css/main.31848f10.css.map",
+    "main.bb8a6c1d.css.map": "/static/css/main.bb8a6c1d.css.map",
     "main.82c2b2de.js.map": "/static/js/main.82c2b2de.js.map",
     "726.acf4e829.chunk.js.map": "/static/js/726.acf4e829.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31848f10.css",
+    "static/css/main.bb8a6c1d.css",
     "static/js/main.82c2b2de.js"
   ]
 }
