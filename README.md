@@ -1,6 +1,6 @@
 # My Creative Projects
 
-My Portfolio website itself is a full stack project, with backend support from Sanity. Beside that, I have four other projects, small and big: 
+My Portfolio website itself is a full stack project, with backend support from Sanity. Besides that, I have four other projects, small and big: 
 
 ## Todo List
 
