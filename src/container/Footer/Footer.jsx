@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
-          <h2 className="head-text"> Drop me a line</h2>
+          <h2 className="head-text"> Leave a <span>Message</span></h2>
         </div>
       </div>
       {!isFormSubmitted ? (

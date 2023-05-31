@@ -36,7 +36,7 @@ const Project = () => {
 
   return (
     <>
-      <h2 className="head-text">My Creative <span>Projects</span></h2>
+      <h2 className="head-text">My <span>Projects</span></h2>
 
       <div className="app__project-filter">
         {['MERN/Full Stack', 'Frontend', 'Backend', 'ReactJS', 'Material UI', 'TypeScript', 'All'].map((item, index) => (
