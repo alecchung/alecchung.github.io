@@ -2,6 +2,8 @@
 
 ## 1. Todo List
 
+![todo](src/assets/todo.png)
+
 - A simple MERN stack web application: MongoDB + Express + ReactJS + NodeJS.
 
 - CRUD implementation: Create, read, update & delete.
@@ -23,6 +25,8 @@ It's designed to be simple and straightforward to use. And Tool Tips are in plac
 - Each operation comes with react-toastify notifications. And two numbers are updated automatically: the total number of todos, and the number of done todos. 
 
 ## 2. Hangman
+
+![hangman](src/assets/hangman.png)
 
 - The world renowned Hangman word game, but in German, i.e. Galgenmännchen.
 
@@ -54,6 +58,8 @@ It's designed to be simple and straightforward to use. And Tool Tips are in plac
 
 ## 3. Travel Agency Website
 
+![tour](src/assets/tour.png)
+
 - **MERN project** with the ability to retrieve and update MongoDB database. 
 
 - Register/Login functionalities. 
@@ -61,6 +67,8 @@ It's designed to be simple and straightforward to use. And Tool Tips are in plac
 - Comment handling with proper authorization. 
 
 ## 4. Admin Dashboard
+
+![dashboard](src/assets/dashboard.png)
 
 - **MERN project** built with Material UI design
 
